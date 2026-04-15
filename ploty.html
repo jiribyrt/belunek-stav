@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dřevěné ploty a zábradlí | Bělunek Stav</title>
+  <link rel="stylesheet" href="sluzby.css">
+  <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo Bělunek Stav">
+    <div class="logo-text">
+      <h1>Bělunek stav</h1>
+      <p>Stavíme srdcem z přírodních materiálů</p>
+    </div>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Domů</a></li>
+      <li><a href="fotografie.html">Fotografie</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero sekce -->
+  <section class="hero-ploty">
+    <div class="hero-content">
+      <h2>Dřevěné ploty a zábradlí</h2>
+      <p>
+        Designové a odolné ploty, zábradlí a dekorativní prvky pro zahrady a domy.  
+        Každý projekt přizpůsobíme vašemu pozemku a stylu bydlení.
+      </p>
+      <a href="kontakt.html" class="btn-cta">Mám zájem o plot či zábradlí</a>
+    </div>
+  </section>
+
+  <!-- Sekce o službě -->
+  <section class="sluzby-section">
+    <div class="sluzby-text">
+      <h3>Proč si vybrat naše ploty a zábradlí?</h3>
+      <p>
+        Naše dřevěné ploty a zábradlí kombinují estetiku, bezpečnost a odolnost. 
+        Díky individuálnímu návrhu přesně zapadnou do vašeho prostředí a vydrží dlouhá léta s minimální údržbou.
+      </p>
+    </div>
+
+    <div class="sluzby-benefits">
+      <div class="benefit">
+        <h4>📐 Individuální návrh dle pozemku</h4>
+        <p>Každý plot či zábradlí navrhujeme na míru tak, aby ladil s vaším domem i zahradou.</p>
+      </div>
+      <div class="benefit">
+        <h4>⚒ Kombinace dřeva a kovu</h4>
+        <p>Moderní spojení přírodních a odolných materiálů zajišťuje dlouhou životnost.</p>
+      </div>
+      <div class="benefit">
+        <h4>🛠 Snadná údržba</h4>
+        <p>Používáme materiály a povrchové úpravy, které vyžadují minimum péče.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inspirace -->
+  <section class="sluzby-gallery">
+    <h3>Naše realizace</h3>
+    <div class="gallery-grid">
+      <img src="img/ploty2.png" alt="Dřevěný plot u domu">
+      <img src="img/ploty3.png" alt="Designové zábradlí na terase">
+      <img src="img/ploty4.png" alt="Kombinace dřeva a kovu u plotu">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Bělunek stav</h3>
+        <p>Stavíme srdcem z přírodních materiálů</p>
+      </div>
+      <div class="footer-col">
+        <h4>Rychlé odkazy</h4>
+        <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="fotografie.html">Fotografie</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <p>+420 123 456 789</p>
+        <p><a href="mailto:info@belunekstav.cz">info@belunekstav.cz</a></p>
+        <p>Příkladná 123<br>123 45 Praha</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sledujte nás</h4>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Bělunek stav. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+</body>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+</html>

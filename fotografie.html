@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bělunek Stav</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo Bělunek Stav">
+    <div class="logo-text">
+      <h1>Bělunek stav</h1>
+      <p>Stavíme srdcem z přírodních materiálů</p>
+    </div>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Domů</a></li>
+      <li><a href="fotografie.html">Fotografie</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="gallery">
+    <h2>Naše projekty</h2>
+    <div class="gallery-grid">
+      
+      <div class="gallery-item">
+        <img src="img/pristresek.png" alt="Dřevostavba u lesa">
+        <h3>Přístřešek</h3>
+        <p>Moderní přírodní přístřešek zasazený do zeleně.</p>
+        <button onclick="openProject(0)">Více</button>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/vykop1.png" alt="Interiér z přírodních materiálů">
+        <h3>Výkopové práce</h3>
+        <p>Udržitelný a útulný interiér plný dřeva.</p>
+        <button onclick="openProject(1)">Více</button>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/domecek.png" alt="Rodinný dům">
+        <h3>Rodinný dům</h3>
+        <p>Kombinace funkčnosti a moderní architektury.</p>
+        <button onclick="openProject(2)">Více</button>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/pergola.png" alt="Rodinný dům">
+        <h3>Pergola</h3>
+        <p>Kombinace funkčnosti a moderní architektury.</p>
+        <button onclick="openProject(3)">Více</button>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/kuchyn.png" alt="Rodinný dům">
+        <h3>Rekonstrukce kuchyně</h3>
+        <p>Kombinace funkčnosti a moderní architektury.</p>
+        <button onclick="openProject(4)">Více</button>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/zahradnidomek.png" alt="Rodinný dům">
+        <h3>Zahradní domek</h3>
+        <p>Kombinace funkčnosti a moderní architektury.</p>
+        <button onclick="openProject(5)">Více</button>
+      </div>
+    
+    </div>
+  </section>
+
+<!-- Modal pro více obrázků -->
+<div id="imgModal" class="modal">
+  <div class="overlay" onclick="closeModal()"></div>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="modalImg" src="">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3>Bělunek stav</h3>
+      <p>Stavíme srdcem z přírodních materiálů</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Rychlé odkazy</h4>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="fotografie.html">Fotografie</a></li>
+        <li><a href="sluzby.html">Služby</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <p>+420 123 456 789</p>
+      <p><a href="mailto:info@belunekstav.cz">info@belunekstav.cz</a></p>
+      <p>Příkladná 123<br>123 45 Praha</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Sledujte nás</h4>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2024 Bělunek stav. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script>
+  const projectImages = [
+    ["img/pristresek.png", "img/pristresek2.png", "img/pristresek3.png", "img/pristresek4.png", "img/pristresek5.png"],
+    ["img/vykop1.png", "img/vykop2.png", "img/vykop3.png", "img/vykop4.png", "img/vykop5.png"],
+    ["img/domecek.png", "img/domek1.png", "img/domek2.png", "img/domek3.png", "img/domek4.png", "img/domek5.png", "img/domek6.png", "img/domek7.png", "img/domek8.png"],
+    ["img/pergola.png", "img/pergola1.png", "img/pergola2.png", "img/pergola3.png"],
+    ["img/kuchyn.png", "img/kuchyn2.png", "img/kuchyn3.png", "img/kuchyn4.png"],
+    ["img/zahradnidomek.png", "img/zahradnidomek2.png", "img/zahradnidomek3.png", "img/zahradnidomek4.png", "img/zahradnidomek5.png"]
+  ];
+
+  let currentProject = 0;
+  let currentSlide = 0;
+
+  function openProject(index) {
+    currentProject = index;
+    currentSlide = 0;
+    document.getElementById("imgModal").style.display = "block";
+    showSlide();
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+
+  function changeSlide(n) {
+    currentSlide += n;
+    if (currentSlide < 0) {
+      currentSlide = projectImages[currentProject].length - 1;
+    } else if (currentSlide >= projectImages[currentProject].length) {
+      currentSlide = 0;
+    }
+    showSlide();
+  }
+
+  function showSlide() {
+    document.getElementById("modalImg").src = projectImages[currentProject][currentSlide];
+  }
+
+  // ESC zavře modal
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+</script>
+</body>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+</html>
